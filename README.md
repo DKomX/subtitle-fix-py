@@ -1,56 +1,34 @@
-# subtitle-fix-py
-Ovaj Python program ispravlja najčešće pogrešne znakove u titlovima na hrvatskome jeziku. 
-# Ispravak znakova u titlovima (Python program)
+**subtitle-fix-py**
+This Python program corrects the most common character errors in Croatian subtitles.
 
-## O programu
+**About the Program**
+This program automatically fixes incorrectly displayed characters in text-based subtitles.
+It is useful when characters like č, ć, đ, š, ž are not shown properly (for example, if they appear as "æ", "ð", "ae", etc.).
 
-Ovaj program automatski ispravlja pogrešno prikazane znakove u tekstualnim titlovima.  
-Koristan je kada se znakovi poput č, ć, đ, š, ž ne prikažu pravilno (npr. ako se pojave kao "æ", "ð", "ae", itd.).
+**What the Program Does**
+   Asks the user to enter the name of a .txt subtitle file
+   Automatically tries to load the file content using cp1250 encoding, and then utf-8 if the first attempt fails
+   Detects and fixes the most common character display errors
+   Saves a new, corrected file with the name corrected_[original_name]
 
-## Što program radi
+**Project Contents**
+   ispravak.py – Python script that performs the corrections
+   README.md – Instructions for using the program
 
-- Traži od korisnika da unese ime .txt datoteke s titlovima
-- Automatski pokušava učitati sadržaj datoteke s kodiranjem cp1250, a zatim s utf-8 ako prvo ne uspije
-- Prepoznaje i ispravlja najčešće greške u prikazu znakova
-- Sprema novi, ispravljeni fajl s nazivom ispravljeno_[originalni_naziv]
+**How to Use**
 
-## Sadržaj projekta
+1. Check if you have Python installed (version 3.10 or newer).
+2. Open ispravak.py in any Python editor
+3. Run the program. When the message "Enter the name of the .txt subtitle file (e.g., subtitles.txt)" appears, type the file name (e.g., mymovie.txt).
+4. The program will try to open the file using cp1250 encoding. If that fails, it will try utf-8.
+5. After successfully loading the file, the program will apply the corrections and save a new file named: corrected_mymovie.txt
+6. Open the corrected file and check the result.
 
-ispravak.py - Python skripta koja vrši ispravke
-README.md - Upute za korištenje programa
-
-## Kako koristiti
-
-1. Provjerite imate li instaliran Python (verzija 3.10 ili novija).  
-   Python možete preuzeti ovdje: https://www.python.org/downloads/
-
-2. Otvorite ispravak.py u bilo kojem Python editoru, npr.:
-   - IDLE (dolazi uz Python)
-   - Visual Studio Code
-   - PyCharm
-   - Terminal / CMD
-
-3. Pokrenite program. Kada se pojavi poruka "Unesi ime .txt datoteke s titlovima (npr. titlovi.txt)" upišite naziv datoteke (npr. mojfilm.txt).
-
-4. Program će pokušati otvoriti datoteku s kodiranjem cp1250. Ako to ne uspije, pokušat će s utf-8.
-
-5. Nakon uspješnog učitavanja, program će napraviti ispravke i spremiti novu datoteku s nazivom: ispravljeno_mojfilm.txt
-
-6. Otvorite ispravljenu datoteku i provjerite rezultat.
-
-## Napomena o kodiranju
-
-Ova verzija programa pokušava otvoriti datoteku s dva najčešća kodiranja:
-- cp1250 (Windows kodna stranica za hrvatski/istočnoeuropske jezike)
-- utf-8 (najrašireniji standard za kodiranje teksta)
-
-Ako nijedno ne uspije, program će javiti korisniku detalje pokušaja.
-
-## Zahtjevi
-
-- Python 3.10 ili noviji
-- .txt datoteka s titlovima koje želite ispraviti
-- Editor koji može pokretati Python skripte
+**Note on Encoding**
+This version of the program attempts to open the file using two of the most common encodings:
+   cp1250 (Windows code page for Croatian/East European languages)
+   utf-8 (the most widespread text encoding standard)
+If neither works, the program will inform the user about the attempted operations.
 
 
-Autor: Iva Široki
+Author: Iva Široki
